@@ -78,6 +78,8 @@ weather-dashboard/
 
 ## Screenshots
 
+Weather Dashboard
 ![Weather Dashboard](screenshots/weatherDashboard.png)
 
-![5-Day Forecast](image-1.png)
+5-Day Forecast
+![5-Day Forecast](screenshots/forecast.png)
