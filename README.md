@@ -33,11 +33,17 @@ Before you begin, ensure you have the following installed:
 Follow these steps to set up and run the project locally:
 
 1. **Clone the repository**:
+
+```bash
    git clone https://github.com/erdemsert7/weather-dashboard.git
    cd weather-dashboard
+```
 
 2. **Install dependencies**:
+
+```bash
    npm install
+```
 
 3. **Set up environment variables**:
    Create a .env.local file in the root directory.
@@ -45,7 +51,10 @@ Follow these steps to set up and run the project locally:
    NEXT_PUBLIC_API_KEY=your_api_key_here
 
 4. **Run the development server**:
+
+```bash
    npm run dev
+```
 
 5. **Open the app**:
    Open your browser and navigate to http://localhost:3000 to see the app in action.
@@ -62,19 +71,39 @@ Search History: Access your last 5 searched cities by clicking on the history ca
 
 ## Project Structure
 
+```bash
 weather-dashboard/
-├── components/ # Reusable React components (WeatherCard, ForecastCard, etc.)
-├── hooks/ # Custom hooks (useWeather, useForecast, useSearchHistory, useUnitToggle)
-├── pages/ # Next.js pages (weatherDashboard.tsx, forecastPage.tsx, \_app.tsx, index.tsx)
-├── types/ # TypeScript type definitions (weather.ts, forecast.ts)
-├── utils/ # Utility functions (utils.ts)
-├── styles/ # Global styles (globals.css)
+├── components/ # Reusable React components
+│ ├── WeatherCard.tsx
+│ ├── ForecastCard.tsx
+│ ├── SearchBar.tsx
+│ ├── ErrorMessage.tsx
+│ └── SearchHistory.tsx
+├── hooks/ # Custom hooks
+│ ├── useWeather.ts
+│ ├── useForecast.ts
+│ ├── useSearchHistory.ts
+│ └── useUnitToggle.ts
+├── pages/ # Next.js pages
+│ ├── weatherDashboard.tsx
+│ ├── forecastPage.tsx
+│ ├── app.tsx
+│ └── index.tsx
+├── types/ # TypeScript type definitions
+│ ├── weather.ts
+│ └── forecast.ts
+├── utils/ # Utility functions
+│ └── utils.ts
+├── styles/ # Global styles
+│ └── globals.css
+├── public/ # Static assets
 ├── .env.local # Environment variables (not tracked by Git)
 ├── .env.example # Example environment variables
 ├── .gitignore # Files and folders to ignore in Git
 ├── README.md # Project documentation
 ├── package.json # Project dependencies and scripts
-├── tsconfig.json # TypeScript configuration
+└── tsconfig.json # TypeScript configuration
+```
 
 ## Screenshots
 
