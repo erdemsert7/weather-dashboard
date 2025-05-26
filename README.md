@@ -112,3 +112,7 @@ Weather Dashboard
 
 5-Day Forecast
 ![5-Day Forecast](screenshots/forecast.png)
+
+## Live Demo
+
+**Canlı Demo Linki**: `https://weather-dashboard-rho-self.vercel.app/`
