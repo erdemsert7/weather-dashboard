@@ -1,40 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Weather Dashboard
 
-## Getting Started
+A simple and responsive weather dashboard built with Next.js, TypeScript, and React Query. It allows users to search for current weather conditions and a 5-day forecast for any city, with the option to toggle between Celsius and Fahrenheit units.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Current Weather**: Displays the current weather conditions for a searched city, including temperature, humidity, wind speed, and a dynamic background gradient based on the weather.
+- **5-Day Forecast**: Shows a 5-day weather forecast with daily summaries.
+- **Unit Toggle**: Switch between Celsius (metric) and Fahrenheit (imperial) units.
+- **Search History**: Stores the last 5 searched cities for quick access.
+- **Responsive Design**: Works seamlessly on both desktop and mobile devices.
+- **Error Handling**: Gracefully handles invalid city searches and API errors.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech Stack
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+- **Next.js**: For building the React application with server-side rendering.
+- **TypeScript**: For type safety and better developer experience.
+- **React Query**: For efficient data fetching and caching.
+- **Tailwind CSS**: For styling the UI.
+- **OpenWeatherMap API**: For fetching weather data.
+- **React Router DOM**: For client-side routing.
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Prerequisites
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+Before you begin, ensure you have the following installed:
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Node.js** (v14 or higher)
+- **npm** (or yarn)
+- **Git**
 
-## Learn More
+## Setup Instructions
 
-To learn more about Next.js, take a look at the following resources:
+Follow these steps to set up and run the project locally:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+1. **Clone the repository**:
+   git clone https://github.com/erdemsert7/weather-dashboard.git
+   cd weather-dashboard
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. **Install dependencies**:
+   npm install
 
-## Deploy on Vercel
+3. **Set up environment variables**:
+   Create a .env.local file in the root directory.
+   Add your OpenWeatherMap API key (you can get one from OpenWeatherMap):
+   NEXT_PUBLIC_API_KEY=your_api_key_here
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. **Run the development server**:
+   npm run dev
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+5. **Open the app**:
+   Open your browser and navigate to http://localhost:3000 to see the app in action.
+
+## Usage
+
+Search for a City: Enter a city name in the search bar (e.g., "Eskişehir") to view the current weather and forecast.
+
+Toggle Units: Click the "Switch to Fahrenheit/Celsius" button to toggle between temperature units.
+
+View Forecast: Click on the current weather card to see the 5-day forecast for the city.
+
+Search History: Access your last 5 searched cities by clicking on the history cards.
+
+## Project Structure
+
+weather-dashboard/
+├── components/ # Reusable React components (WeatherCard, ForecastCard, etc.)
+├── hooks/ # Custom hooks (useWeather, useForecast, useSearchHistory, useUnitToggle)
+├── pages/ # Next.js pages (weatherDashboard.tsx, forecastPage.tsx, \_app.tsx, index.tsx)
+├── types/ # TypeScript type definitions (weather.ts, forecast.ts)
+├── utils/ # Utility functions (utils.ts)
+├── styles/ # Global styles (globals.css)
+├── .env.local # Environment variables (not tracked by Git)
+├── .env.example # Example environment variables
+├── .gitignore # Files and folders to ignore in Git
+├── README.md # Project documentation
+├── package.json # Project dependencies and scripts
+├── tsconfig.json # TypeScript configuration
+
+## Screenshots
+
+![Weather Dashboard](screenshots/weatherDashboard.png)
+
+![5-Day Forecast](image-1.png)
